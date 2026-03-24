@@ -420,3 +420,22 @@ body.v-0409 .event_date { background-image: url(../img/1st_aniv.webp) !important
         font-size: 1.5rem;
     }
 }
+/* Version Switch Button */
+.version-switch {
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 18px 0 13px;
+    color: #c9a84c;
+    background: none;
+    border: none;
+    border-right: #7e7e7e 2px solid;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+.version-switch:hover { color: #f0d080; }
+
+@media screen and (max-width: 1181px) {
+    .version-switch { font-size: 0.8rem; }
+}

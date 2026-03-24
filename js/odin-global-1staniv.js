@@ -40,6 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Re-open version selector
+    var switchBtn = document.getElementById('version-switch-btn');
+    if (switchBtn) {
+        switchBtn.addEventListener('click', function () {
+            if (versionOverlay) {
+                versionOverlay.style.display = '';
+                versionOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    }
+
     /* =========================
        기본 요소
     ========================= */
