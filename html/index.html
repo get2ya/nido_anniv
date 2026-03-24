@@ -96,23 +96,23 @@
                 <h2><span class="visually-hidden">Grand Fest of Valhalla</span></h2>
 
                 <!-- main_vod_0409 -->
-                <div class="vod_btn">
+                <div class="vod_btn" data-version="0409">
                     <a href="https://www.youtube.com/watch?v=NLPM77eSou8" class="yt-popup"><span class="visually-hidden">1st Anniversary User Tribute</span></a>
                 </div>
                 <!-- //main_vod_0409 -->
-                <!-- main_vod_0423 
-                <div class="vod_btn_0423">
+                <!-- main_vod_0423 -->
+                <div class="vod_btn_0423" data-version="0423">
                     <a href="https://www.youtube.com/watch?v=NLPM77eSou8" class="yt-popup"><span class="visually-hidden">1st Anniversary Cinematic</span></a>
                     <a href="https://www.youtube.com/watch?v=NLPM77eSou8" class="yt-popup"><span class="visually-hidden">1st Anniversary User Tribute</span></a>
                 </div>
-                //main_vod_0423 -->
+                <!-- //main_vod_0423 -->
 
                 <span class="h2"></span>
                 <span class="main_character"></span>
                 <span class="main_coupon"></span>
                 <span class="main_odin"></span>
                 <span class="main_item"></span>
-
+                <span class="main_item_m"></span>
             </div>
         </section>
         <!-- //section01 end -->
@@ -130,20 +130,31 @@
                             Special 1st Anniversary Event!<br>Get a Class Change Ticket and Class Change Tokens!
                         </span>
                     </li>
-                    <li>
+                    <!-- 0409 -->
+                    <li data-version="0409">
                         <span>
-                            Odin’s Coupons, 234 Divine Summoning Tickets,<br class="pc_br">4 Plomki’s Summoning Tickets,<br class="pc_br">+6 Epic Weapon/Armor, and more!
+                            Odin’s Coupons, 234 Divine Summoning Tickets,<br>4 Plomki’s Summoning Tickets,<br class="pc_br">+6 Epic Weapon/Armor, and more!
                         </span>
                     </li>
+                    <!-- //0409 -->
+                    <!-- 0423 -->
+                    <li class="after_0423" data-version="0423">
+                        <span>
+                            5 Odin’s Coupons, 3 Odin’s Boonstones,<br class="pc_br">
+                            234 Divine Summoning Tickets,<br class="mo_br"> Plomki’s<br class="pc_br">
+                            Summoning Tickets, +6 Epic Weapon/Armor, and more!<br class="pc_br">
+                        </span>
+                    </li>
+                    <!-- //0423 -->
                     <li>
                         <span>
-                            Special gifts including 44 Illuminant Summoning Tickets <br class="pc_br">and 1 Plomki’s Avatar/Mount/Weapon Skin<br class="pc_br"> Summoning Selection Ticket!
+                            Special gifts including 44 Illuminant Summoning Tickets <br>and 1 Plomki’s Avatar/Mount/Weapon Skin<br class="pc_br"> Summoning Selection Ticket!
                         </span>
                     </li>
                 </ul>
                 <p class="gift_info">
                     <span class="visually-hidden">Check out the special benefits for Odin's 1st Anniversary!</span>
-                    ※ For more details, please check the event notice on the official website, which will be released on April 23, 2026.
+                    ※ For more details, please check the event notice on the <br class="mo_br">website, which will be released on April 23, 2026.
                 </p>
             </div>
         </section>
@@ -182,6 +193,25 @@
             </ul>
         </section>
 
+    </div>
+
+    <!-- version selector -->
+    <div id="version-selector" class="version-overlay">
+        <div class="version-overlay-bg"></div>
+        <div class="version-content">
+            <div class="version-logo"></div>
+            <h2 class="version-title">Select Event Version</h2>
+            <div class="version-buttons">
+                <button class="version-btn" data-select-version="0409">
+                    <span class="version-btn-label">APR 9</span>
+                    <span class="version-btn-sub">1st Anniversary Launch</span>
+                </button>
+                <button class="version-btn" data-select-version="0423">
+                    <span class="version-btn-label">APR 23</span>
+                    <span class="version-btn-sub">1st Anniversary Update</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- youtube pop -->

@@ -1,6 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================
+       Version Selector
+    ========================= */
+
+    const VERSION_KEY = 'odinSelectedVersion';
+    const versionOverlay = document.getElementById('version-selector');
+
+    function applyVersion(version) {
+        document.body.classList.remove('v-0409', 'v-0423');
+        document.body.classList.add('v-' + version);
+        try { localStorage.setItem(VERSION_KEY, version); } catch (e) {}
+    }
+
+    function hideVersionOverlay() {
+        if (!versionOverlay) return;
+        versionOverlay.classList.add('hidden');
+        setTimeout(function () { versionOverlay.style.display = 'none'; }, 500);
+        document.body.style.overflow = '';
+    }
+
+    // Check saved preference
+    var savedVersion = null;
+    try { savedVersion = localStorage.getItem(VERSION_KEY); } catch (e) {}
+
+    if (savedVersion) {
+        applyVersion(savedVersion);
+        if (versionOverlay) versionOverlay.style.display = 'none';
+    } else if (versionOverlay) {
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Version button click handlers
+    document.querySelectorAll('[data-select-version]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var version = btn.getAttribute('data-select-version');
+            applyVersion(version);
+            hideVersionOverlay();
+        });
+    });
+
+    /* =========================
        기본 요소
     ========================= */
 
@@ -223,7 +263,7 @@ if (document.body.classList.contains("snap-mode")) {
 
         const box = document.querySelector('.resize_box');
 
-        if (winWidth > 1024) {
+        if (winWidth > 1181) {
             const scale = winHeight / baseHeight;
 
             box.style.transform = `translateX(-50%) scale(${scale})`;
